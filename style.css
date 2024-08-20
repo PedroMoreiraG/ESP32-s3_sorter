@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s;
+}
+p {
+    height: 40px;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#message {
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.blink {
+    animation: blink-animation 1s infinite;
+}
+
+#myButton {
+    color: white;
+    background-color: black;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes blink-animation {
+    0% { background-color: red; }
+    50% { background-color: darkred; }
+    100% { background-color: red; }
+}
