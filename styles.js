@@ -3,8 +3,12 @@ document.getElementById('myButton').addEventListener('click', function() {
     const body = document.body;
     
     // Genera un valor aleatorio para decidir entre "Analisis" y "Pase"
-    const isAnalysis = Math.random() < 0.2;
-    const counterAnalisis =+1;
+    
+    const app = document.getElementById('app');
+    const numberProb = document.getElementById('prob');
+    const numberDecimal = numberProb.value / 100;
+     
+    const isAnalysis = Math.random() < numberDecimal;
     if (isAnalysis) {
         messageElement.textContent = 'Analisis';
         body.style.backgroundColor = 'red';
@@ -15,4 +19,11 @@ document.getElementById('myButton').addEventListener('click', function() {
         body.classList.remove('blink');
     }
 });
-console.log(counterAnalisis);
+
+function calcProb(){
+
+    const number = document.createElement('p');
+    number.textContent = numberDecimal;
+    app.appendChild(number);
+    
+}
